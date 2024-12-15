@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agregar_producto</title>
+    <link rel="stylesheet" href="/carpeta.styles/materiales no disponibles.css">
+    <script src="carpeta.js/configuracion.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1> Agregar productos no disponibles</h1>
+            <a href="/carpeta.html/index.html" class="btn" style="text-decoration: none; background-color: #f44336; color: white; padding: 10px 15px; border-radius: 5px;">Salir</a>
+        </div>
+
+        <!-- Formulario para agregar nuevo producto -->
+        <form id="productForm">
+            <input type="text" name="ID" placeholder="ID" required>
+            <input type="text" name="nombre" placeholder="Nombre del producto" required>
+            <input type="text" name="descripcion" placeholder="Descripción del producto" required>
+            <input type="number" name="cantidad" placeholder="Cantidad" required min="1">
+            <input type="text" name="color" placeholder="Color" required>
+            <button type="submit" class="btn">Agregar Producto</button>
+        </form>
+        
+
+        <!-- Tabla de productos disponibles -->
+        <h2>Productos no disponibles</h2>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Color</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1233</td>
+                    <td>Acrílico</td>
+                    <td>50x50</td>
+                    <td>0</td>
+                    <td>Negro</td>
+                    <td><button class="deleteBtn">Eliminar</button></td>
+                </tr>
+                <td>1233</td>
+                <td>Acrílico</td>
+                <td>12</td>
+                <td>3</td>
+                <td>platiado</td>
+                <td><button class="deleteBtn">Eliminar</button></td>
+            </tr>
+            <tr>
+                <tr>
+                    <td>1233</td>
+                    <td>Acrílico</td>
+                    <td>3 milimetros</td>
+                    <td>2</td>
+                    <td>Dorado</td>
+                    <td><button class="deleteBtn">Eliminar</button></td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td>1233</td>
+                        <td>MDF 2 milimetros</td>
+                        <td>8 milimetros</td>
+                        <td>12</td>
+                        <td>Madera</td>
+                        <td><button class="deleteBtn">Eliminar</button></td>
+                <tr>
+                    <td>444</td>
+                    <td>DTF</td>
+                    <td>Madera de cuadros</td>
+                    <td>0</td>
+                    <td>Madera</td>
+                    <td><button class="deleteBtn">Eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <script>
+        // Script para agregar y eliminar productos
+        document.getElementById('productForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            // Obtiene los valores de los campos
+            const id = this.ID.value;
+            const nombre = this.nombre.value;
+            const descripcion = this.descripcion.value;
+            const cantidad = this.cantidad.value;
+            const color = this.color.value;
+
+            // Crea una nueva fila en la tabla
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${id}</td>
+                <td>${nombre}</td>
+                <td>${descripcion}</td>
+                <td>${cantidad}</td>
+                <td>${color}</td>
+                <td><button class="deleteBtn">Eliminar</button></td>
+            `;
+
+            // Agrega la nueva fila al cuerpo de la tabla
+            document.querySelector('#productTable tbody').appendChild(newRow);
+
+            // Limpia el formulario
+            this.reset();
+        });
+
+        // Delegación de eventos para eliminar productos
+        document.querySelector('#productTable tbody').addEventListener('click', function(event) {
+            if (event.target.classList.contains('deleteBtn')) {
+                event.target.closest('tr').remove(); // Elimina la fila del producto
+            }
+        });
+    </script>
+</body>
+</html>

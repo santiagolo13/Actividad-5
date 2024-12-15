@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Material</title>
+    <link rel="stylesheet" href="/carpeta.styles/materiales.css">
+    <script src="/carpeta.js/configurscion.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Agregar Material</h1>
+
+        <!-- Formulario para agregar nuevo material -->
+        <form id="productForm">
+            <input type="text" name="ID" placeholder="ID del material" required>
+            <input type="text" name="nombre" placeholder="Nombre del material" required>
+            <input type="number" name="cantidad" placeholder="Cantidad" required min="1">
+            <input type="text" name="color" placeholder="Color" required>
+            <button type="submit" class="btn">Agregar Material</button>
+        </form>
+
+        <!-- Campo de búsqueda para filtrar materiales -->
+        <div style="margin: 20px 0;">
+            <input type="text" id="searchInput" placeholder="Buscar material..." style="padding: 10px; width: 70%;">
+            <button id="searchBtn" style="padding: 10px;">Buscar</button>
+        </div>
+
+        <!-- Tabla de materiales disponibles -->
+        <h2>Materiales</h2>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Color</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1233</td>
+                    <td>Acrílico</td>
+                    <td>12</td>
+                    <td>Negro</td>
+                    <td><button class="deleteBtn">Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>1233</td>
+                    <td>Acrílico</td>
+                    <td>12</td>
+                    <td>platiado</td>
+                    <td><button class="deleteBtn">Eliminar</button></td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td>1233</td>
+                        <td>Acrílico</td>
+                        <td>12</td>
+                        <td>Dorado</td>
+                        <td><button class="deleteBtn">Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <tr>
+                            <td>1233</td>
+                            <td>MDF 2 milimetros</td>
+                            <td>12</td>
+                            <td>Madera</td>
+                            <td><button class="deleteBtn">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                <tr>
+                    <td>444</td>
+                    <td>DTF</td>
+                    <td>70</td>
+                    <td>Madera</td>
+                    <td><button class="deleteBtn">Eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Botón de salida -->
+    <div style="margin-top: 20px; text-align: center;">
+        <button id="exitBtn" style="padding: 10px 20px; background-color: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                  <ul>
+                    <li><a href="http://127.0.0.1:3000/carpeta.html/index.html">Salir</a></li>
+                </ul>
+        </button>
+    </div>
+</body>
+</html>
+

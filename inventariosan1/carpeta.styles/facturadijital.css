@@ -1,0 +1,104 @@
+/* Estilo general */
+body {
+    font-family: 'Roboto', sans-serif; /* Cambiar a una fuente más moderna */
+    background-color: #1a1a1d; /* Fondo oscuro para un contraste atractivo */
+    margin: 0;
+    padding: 20px; /* Aumenta un poco el padding general */
+}
+
+/* Contenedor principal de la factura */
+.invoice-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px; /* Ajusta el padding del contenedor */
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 28px; /* Aumenta el tamaño del título */
+    margin-bottom: 20px; /* Espacio adicional debajo del título */
+}
+
+h2, h3 {
+    color: #007BFF;
+    font-size: 20px; /* Aumenta el tamaño de los subtítulos */
+    margin-bottom: 10px; /* Espacio adicional entre títulos */
+}
+
+/* Información de la empresa y del cliente */
+.company-info, .client-info {
+    margin-bottom: 20px; /* Aumenta el margen entre secciones */
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 15px; /* Aumenta el padding de las secciones */
+    background-color: #f7f9fc; /* Fondo claro para las secciones */
+}
+
+/* Tabla de productos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Aumenta el margen entre la tabla y otros elementos */
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px; /* Aumenta el padding de las celdas */
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Estilo de las celdas de entrada */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px; /* Aumenta el padding de los inputs */
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    transition: border-color 0.3s; /* Agrega una transición suave */
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Botones */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px; /* Aumenta el padding de los botones */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Agrega una transición suave */
+    font-size: 16px; /* Aumenta el tamaño de fuente de los botones */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+}
+
+/* Sección de total */
+.total {
+    font-weight: bold;
+    font-size: 1.3em; /* Aumenta el tamaño de la fuente del total */
+    color: #333; /* Cambia el color del total */
+    margin-top: 15px; /* Espacio adicional arriba */
+}
+
+/* Detalles de la factura */
+.invoice-details {
+    margin-top: 20px; /* Aumenta el margen superior */
+    border-top: 1px solid #dddddd;
+    padding-top: 10px; /* Aumenta el padding superior */
+    color: #555; /* Cambia el color del texto */
+}
